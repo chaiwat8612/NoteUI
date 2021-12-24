@@ -1,0 +1,37 @@
+﻿@using NoteUI.Models
+@model BlogResultModel
+
+@{
+    ViewData["Title"] = "Result All Blog";
+}
+
+<br />
+
+<div class="row">
+
+    <div class="container">
+
+        @if (Model != null)
+        {
+            @foreach (BlogModel data in Model.blogList)
+            {
+                string blogId = data.blogId;
+                //string status = data.status;
+                //string numberValue = data.numberValue.ToString();
+
+                <div>
+
+                    <p>blogId:<a href='@Url.Action("blogdetail","blog", new { blogId = @blogId})'>@blogId</a></p>
+                    @*<p>status: @status</p>
+                    <p>value: @numberValue</p>*@
+                    <p>------------------------------------------</p>
+                </div>
+            }
+        }
+        else
+        {
+            <label>No data to show here.</label>
+        }
+
+    </div>
+</div>

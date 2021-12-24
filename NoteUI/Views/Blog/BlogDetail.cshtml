@@ -1,0 +1,27 @@
+﻿@using NoteUI.Models
+@model BlogModel
+
+@{
+    ViewData["Title"] = "Blog Deatil";
+}
+
+<br />
+
+<div class="row">
+
+    <div class="container">
+
+        @if (Model != null)
+        {
+            @*<div><p>blogId: @Model.blogId</p></div>
+            <div><p>Result:</p></div>*@
+            @*<div>@Model.blogDescription</div>*@
+            @Html.Raw(Model.blogDescription)
+        }
+        else
+        {
+            <label>No data to show here.</label>
+        }
+
+    </div>
+</div>
