@@ -50,7 +50,7 @@
         $.ajax({            
             type: "POST",
             url: "@Url.Action("AddBlogPage")",
-            data: { blogDescription: data },
+            data: { description: data },
             dataType: "text",
             success: function (msg) {
                 console.log(msg);

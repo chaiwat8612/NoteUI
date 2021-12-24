@@ -107,12 +107,12 @@ namespace NoteUI.Controllers
         }
 
         [HttpPost]
-        public string AddBlogPage(string blogDescription)
+        public string AddBlogPage(string description)
         {
             try
             {
                 SaveNewBlogModel saveNewBlogModel = new SaveNewBlogModel();
-                saveNewBlogModel.blogDescription = blogDescription;
+                saveNewBlogModel.description = description;
 
                 string saveStatus = "";
 

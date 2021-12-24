@@ -4,6 +4,6 @@ namespace NoteUI.Models
 {
     public class SaveNewBlogModel
     {
-        public string blogDescription { get; set; }
+        public string description { get; set; }
     }
 }
